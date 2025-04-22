@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   const { email, brands, country, postalCode, date, time } = req.body;
 
   try {
-    const response = await fetch("https://script.google.com/macros/s/TUO_SCRIPT_ID/exec", {
+    const response = await fetch("https://script.google.com/macros/s/AKfycbzUWxSVell84lV0B-hP3ZxdD8-wtV7_9EbgdYiY9tNALh1AzeM2TQ-GHPLTS_upE3GN0g/exec", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
