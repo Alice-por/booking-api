@@ -2,7 +2,9 @@ export default async function handler(req, res) {
   const { email, brands, country, postalCode, date, time } = req.body;
 
   try {
-    const response = await fetch("https://script.google.com/a/macros/portraiteyewear.com/s/AKfycbwX-zBEtpXT4b0XGmsHHsqM0alJHQWvw1eMFUthmSv0pjunr_7REPS4x5xmLM7e56HUsw/exec", {
+    const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbz6UxG1aqIa1nd4gjXTYt7l0ovDVHIk9-3IlUNCc60D0FwF5sHsYbV0NmB0PNNec5oL7A/exec";
+
+    const response = await fetch(SHEET_API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -17,6 +19,7 @@ export default async function handler(req, res) {
         time
       })
     });
+
     const result = await response.json();
     res.status(200).json(result);
   } catch (error) {
