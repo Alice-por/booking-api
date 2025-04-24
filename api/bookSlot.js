@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   }
 
   try {
-   const SHEET_API_URL = "https://script.google.com/s/AKfycbwX-zBEtpXT4b0XGmsHHsqM0alJHQWvw1eMFUthmSv0pjunr_7REPS4x5xmLM7e56HUsw/exec";
+   const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbwX-zBEtpXT4b0XGmsHHsqM0alJHQWvw1eMFUthmSv0pjunr_7REPS4x5xmLM7e56HUsw/exec";
 
     const response = await fetch(SHEET_API_URL, {
       method: "POST",
